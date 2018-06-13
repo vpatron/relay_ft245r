@@ -108,13 +108,14 @@ http://zadig.akeo.ie/ and download and install Zadig.
 
 * Run the program
 * Click on "Show All Devices"
-* Back on the main dialog, "FT245R USB FIFO" should appear
+* Back on the main dialog, select "FT245R USB FIFO" in the dropdown
 * Confirm that USB ID shows **0403** and **6001**
-* Click on that and in the pick list specify "libusb-win32"
-* Click on the Replace
+* In the pick list specify "libusb-win32"
+* Click on the Replace Driver button
 * Answer any popup dialogs that show up
 
-This replaces WinUSB for libusb-win32 as the driver to control the board.
+This replaces WinUSB for libusb-win32 as the driver to control the board. The 
+dialog should look like this before you press *Replace Driver*:
 
 ![Zadig dialog](images/Zadig_Replace_Driver.png)
 
@@ -145,11 +146,15 @@ Cannot take control of the USB device. Many possible causes:
 
 Correct:
 
-> rb = relay_ft245r.FT245R()
+```python
+rb = relay_ft245r.FT245R()
+```
 
 Incorrect:
 
-> rb = relay_ft245r.FT245R
+```python
+rb = relay_ft245r.FT245R
+```
 
 The second one calls out the object template instead of an object instance.
 
@@ -171,7 +176,8 @@ masking is not reliable (the USB readstatus() may be happening before
 the previous USB write happened) so I restructured the code to only
 read the relay state once on connect().
 
-This was tested on Linux Mint 18.3 (Debian) and Windows 7 Professional.
+This was tested on Linux Mint 18.3 (Debian) and Windows 7 Professional. It 
+should work fine on Raspberry Pi (Debian) and Windows 10, etc.
 
 # License
 
