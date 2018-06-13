@@ -107,7 +107,7 @@ it as the driver assigned to the FT245R board. Go to
 http://zadig.akeo.ie/ and download and install Zadig.
 
 * Run the program
-* Click on "Show All Devices"
+* Click on "Options" and then "Show All Devices"
 * Back on the main dialog, select "FT245R USB FIFO" in the dropdown
 * Confirm that USB ID shows **0403** and **6001**
 * In the pick list specify "libusb-win32"
