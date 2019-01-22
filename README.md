@@ -3,7 +3,7 @@
 *relay_ft245r* is a Python module to control relay boards based on the 
 FTDI FT245R chip. A popular example is the Sainsmart USB relay board.
 
-![Sainsmart 4-channel USB relay board](sainsmart_usb_4relay.jpg)
+![Sainsmart 4-channel USB relay board](images/sainsmart_usb_4relay.jpg)
 
 # How to use *relay_ft245r*
 
