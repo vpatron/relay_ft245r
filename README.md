@@ -75,7 +75,7 @@ If this list includes "plugdev", go on to the next step. Othewise, do
 this command except replace <user> with your user name:
 
 ```bash
-sudo useradd -G plugdev <user>
+sudo addgroup <user> plugdev
 ```
 
 ### Adding a udev rule
